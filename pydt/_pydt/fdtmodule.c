@@ -226,6 +226,7 @@ static PyObject *fdt_obj_new(PyTypeObject *type, PyObject *args, PyObject *kwarg
     }
     fdtobject->magic = fdt_magic(fdtobject->fdt);
     fdtobject->version = fdt_version(fdtobject->fdt);
+    fdtobject->totalsize = fdt_totalsize(fdtobject->fdt);
 
     return (PyObject *)fdtobject;
 }
@@ -238,6 +239,8 @@ static PyMemberDef fdt_obj_members[] = {
     {"magic", Py_T_UINT, offsetof(FDTObject, magic), Py_READONLY,
     PyDoc_STR("")},
     {"version", Py_T_UINT, offsetof(FDTObject, version), Py_READONLY,
+    PyDoc_STR("")},
+    {"totalsize", Py_T_UINT, offsetof(FDTObject, totalsize), Py_READONLY,
     PyDoc_STR("")},
     {NULL},
 };

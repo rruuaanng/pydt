@@ -41,6 +41,7 @@ typedef struct {
     /* Raw FDT */
     uint32_t magic;
     uint32_t version;
+    uint32_t totalsize;
     const void *fdt;
 }FDTObject;
 
