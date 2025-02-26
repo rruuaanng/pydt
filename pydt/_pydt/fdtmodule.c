@@ -1,11 +1,12 @@
-#include "pydt.h"
+#include <fcntl.h>
+#include <sys/stat.h>
+
+#include "fdtmodule.h"
 
 
 /**
  * Module infomation
  */
-#define MODULE_NAME "_fdt"
-#define MODULE_VERSION "0.0.1"
 static PyTypeObject FDT_type;
 
 

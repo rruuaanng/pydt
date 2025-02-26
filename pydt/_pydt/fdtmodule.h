@@ -5,10 +5,6 @@
 #define PY_SSIZE_T_CLEAN
 #include "pythoncapi_compat.h"
 
-/* include POSIX */
-#include <fcntl.h>
-#include <sys/stat.h>
-
 /* include standard */
 #include <stdio.h>
 #include <stdint.h>
@@ -17,6 +13,11 @@
 
 /* */
 #include <libfdt.h>
+
+
+#define MODULE_NAME    "_fdt"
+#define MODULE_VERSION "0.0.1"
+
 
 #ifndef FDT_FULL_PATH_LEN
 # define FDT_FULL_PATH_LEN 0x100 /* 256 */
